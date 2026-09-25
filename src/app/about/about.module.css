@@ -1,0 +1,1112 @@
+.aboutPage {
+  width: 100%;
+}
+
+/* ─── 1. Hero ─── */
+.microBadges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.microBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow-card-rest);
+}
+
+.microBadge .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.badgeTeal { color: var(--color-primary); }
+.badgeGold { color: #b45309; }
+.badgeGreen { color: #4d7c0f; }
+
+/* Light accents for dark backgrounds */
+.iconTeal { color: #6cd8cb; }
+.iconGold { color: #ffdea5; }
+.iconGreen { color: #bff376; }
+
+/* ─── 2. Story & Stat Tiles ─── */
+.storySection {
+  border-top: 1px solid var(--color-line);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .storyGrid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.narrativeCard {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-card-rest);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.narrativeEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.narrativeEyebrow .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.narrativeEyebrowText {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.narrativeTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .narrativeTitle {
+    font-size: 32px;
+  }
+}
+
+.narrativePara {
+  font-size: 16px;
+  color: var(--color-muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.narrativePara:last-child {
+  margin-bottom: 0;
+}
+
+.narrativeEm {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.narrativeQuote {
+  padding: 16px;
+  background: rgba(240, 243, 255, 0.7);
+  border-radius: var(--radius-chip);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quoteIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(15, 148, 136, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quoteIconWrap .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.quoteText {
+  font-size: 13.5px;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+/* 2x2 Stat Tiles */
+.tilesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.statTile {
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card-rest);
+  transition: background-color var(--transition-base);
+  min-height: 170px;
+}
+
+.tileTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tileIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-chip);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card-rest);
+  flex-shrink: 0;
+}
+
+.tileIconBox .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.tileCategory {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.tileBottom {
+  margin-top: 24px;
+}
+
+.tileValue {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.05;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.tileValueSmall {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.tileLabel {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+}
+
+/* Tile Themes */
+.tileTeal { background: rgba(15, 148, 136, 0.1); }
+.tileTeal:hover { background: rgba(15, 148, 136, 0.15); }
+.tileTeal .tileIconBox .material-symbols-outlined { color: var(--color-primary); }
+.tileTeal .tileCategory { color: var(--color-primary); }
+.tileTeal .tileValue { color: var(--color-primary); }
+.tileTeal .tileLabel { color: var(--color-muted); }
+
+.tileGold { background: rgba(255, 222, 165, 0.5); }
+.tileGold:hover { background: rgba(255, 222, 165, 0.7); }
+.tileGold .tileIconBox .material-symbols-outlined { color: #b45309; }
+.tileGold .tileCategory { color: #b45309; }
+.tileGold .tileValue { color: var(--color-gold); }
+.tileGold .tileLabel { color: var(--color-muted); }
+
+.tileNavy { background: var(--color-navy); }
+.tileNavy:hover { background: #101a2c; }
+.tileNavy .tileIconBox { background: rgba(255, 255, 255, 0.1); }
+.tileNavy .tileIconBox .material-symbols-outlined { color: #89f5e7; }
+.tileNavy .tileCategory { color: #94a3b8; }
+.tileNavy .tileValue { color: #ffffff; }
+.tileNavy .tileLabel { color: #94a3b8; }
+
+.tileGreen { background: rgba(191, 243, 118, 0.6); }
+.tileGreen:hover { background: rgba(191, 243, 118, 0.8); }
+.tileGreen .tileIconBox .material-symbols-outlined { color: #4d7c0f; }
+.tileGreen .tileCategory { color: #4d7c0f; }
+.tileGreen .tileValue { color: var(--color-leaf-green); }
+.tileGreen .tileLabel { color: var(--color-muted); }
+
+/* ─── 3. Mission, Vision & Values ─── */
+.mvvSection {
+  width: 100%;
+  padding-top: var(--section-pad-standard);
+  padding-bottom: var(--section-pad-standard);
+  background: #f4f6f5;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.mvvSectionHeader {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.sectionEyebrow {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--color-muted);
+  margin-top: 12px;
+  line-height: 1.55;
+}
+
+/* Mission & Vision */
+.mvPair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .mvPair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mvCard {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-card-rest);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.mvCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.mvAccentBar {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 6px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+}
+
+.barTeal { background: var(--color-primary); }
+.barGold { background: var(--color-gold); }
+
+.mvIconRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mvIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-chip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mvIconBox .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.mvIconTeal { background: rgba(15, 148, 136, 0.1); }
+.mvIconTeal .material-symbols-outlined { color: var(--color-primary); }
+
+.mvIconGold { background: rgba(255, 222, 165, 0.5); }
+.mvIconGold .material-symbols-outlined { color: #b45309; }
+
+.mvCardType {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.mvCardBody {
+  font-size: 16px;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+/* 4 Value Cards */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.valueCard {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card-rest);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.valueCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.valueIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-chip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.valueIconBox .material-symbols-outlined {
+  font-size: 22px;
+}
+
+.valueTeal { background: rgba(15, 148, 136, 0.1); }
+.valueTeal .material-symbols-outlined { color: var(--color-primary); }
+
+.valueGold { background: rgba(255, 222, 165, 0.5); }
+.valueGold .material-symbols-outlined { color: #b45309; }
+
+.valueGreen { background: rgba(191, 243, 118, 0.6); }
+.valueGreen .material-symbols-outlined { color: #4d7c0f; }
+
+.valueMint { background: rgba(137, 245, 231, 0.35); }
+.valueMint .material-symbols-outlined { color: var(--color-primary); }
+
+.valueTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.valueDesc {
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ─── 4. Trust Banner & Team ─── */
+.teamSection {
+  scroll-margin-top: 80px;
+}
+
+.trustBanner {
+  background: var(--color-navy);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  margin-bottom: 64px;
+  color: #ffffff;
+  box-shadow: 0 8px 30px rgba(16, 24, 38, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .trustBanner {
+    padding: 48px;
+  }
+}
+
+.trustGlow {
+  position: absolute;
+  right: -64px;
+  top: -64px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(15, 148, 136, 0.12);
+  filter: blur(48px);
+  pointer-events: none;
+}
+
+.trustContent {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+.trustEyebrow {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.trustTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .trustTitle {
+    font-size: 32px;
+  }
+}
+
+.trustDesc {
+  font-size: 16px;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.trustBadgeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustBadgeItem .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* Team Header */
+.teamHeaderRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .teamHeaderRow {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.teamEyebrow {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.teamSectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+
+.teamHeaderRight {
+  font-size: 14.5px;
+  color: var(--color-muted);
+  max-width: 420px;
+  line-height: 1.55;
+}
+
+/* Team Grid */
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teamCardFeatured {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Featured CEO Card */
+.teamCardFeatured {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card-rest);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .teamCardFeatured {
+    flex-direction: row;
+  }
+}
+
+.featuredImageWrap {
+  width: 144px;
+  height: 144px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(16, 24, 38, 0.08);
+}
+
+@media (min-width: 768px) {
+  .featuredImageWrap {
+    width: 176px;
+    height: 176px;
+  }
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .featuredInfo {
+    text-align: left;
+  }
+}
+
+.featuredBadge {
+  display: inline-block;
+  align-self: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(15, 148, 136, 0.1);
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .featuredBadge {
+    align-self: flex-start;
+  }
+}
+
+.featuredRole {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.featuredDept {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.featuredBio {
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.featuredLocation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .featuredLocation {
+    justify-content: flex-start;
+  }
+}
+
+.featuredLocationIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--chip-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featuredLocationIcon .material-symbols-outlined {
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+.featuredLocationText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+/* Standard Team Card */
+.teamCard {
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card-rest);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.teamCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(15, 148, 136, 0.3);
+}
+
+.teamCardIconBox {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-card);
+  background: #f4f6f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.teamCardIconBox .material-symbols-outlined {
+  font-size: 30px;
+  color: var(--color-primary);
+}
+
+.teamCardIconBox.accentGold .material-symbols-outlined {
+  color: var(--color-gold);
+}
+
+.teamCardIconBox.accentGreen .material-symbols-outlined {
+  color: var(--color-leaf-green);
+}
+
+.teamCardDeptBadge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--chip-teal);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary-dark);
+  margin-bottom: 10px;
+}
+
+.teamCardRole {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.teamCardBio {
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.teamCardFocus {
+  margin-top: 24px;
+  padding: 12px 14px;
+  background: rgba(240, 243, 255, 0.7);
+  border-radius: var(--radius-chip);
+}
+
+.teamCardFocusLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* ─── 5. Dark Roadmap ─── */
+.roadmapSection {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: var(--color-navy);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmapGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 55% 25%,
+    rgba(15, 148, 136, 0.12),
+    transparent 60%
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.roadmapInner {
+  position: relative;
+  z-index: 2;
+}
+
+.roadmapHeader {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.roadmapEyebrow {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.roadmapTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.roadmapSub {
+  font-size: 16px;
+  color: #94a3b8;
+  margin-top: 12px;
+  line-height: 1.55;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.timelineSpine {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  width: 2px;
+  background: rgba(219, 226, 246, 0.2);
+  left: 16px;
+}
+
+@media (min-width: 768px) {
+  .timelineSpine {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timelineItems {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .timelineItem {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.timelineDot {
+  position: absolute;
+  left: 16px;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(191, 243, 118, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(127, 174, 58, 0.35);
+}
+
+@media (min-width: 768px) {
+  .timelineDot {
+    left: 50%;
+  }
+}
+
+.timelineDotInner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-navy);
+}
+
+.timelineContent {
+  margin-left: 48px;
+}
+
+@media (min-width: 768px) {
+  .timelineContent {
+    width: calc(50% - 48px);
+    margin-left: 0;
+  }
+
+  .timelineItemLeft .timelineContent {
+    margin-right: auto;
+    padding-right: 48px;
+    text-align: right;
+  }
+
+  .timelineItemRight .timelineContent {
+    margin-left: auto;
+    padding-left: 48px;
+    text-align: left;
+  }
+}
+
+.timelineYearPill {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 222, 165, 0.85);
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+
+.timelineMilestoneTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .timelineMilestoneTitle {
+    font-size: 22px;
+  }
+}
+
+.timelineMilestoneDesc {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Bottom CTA Callout */
+.roadmapCta {
+  margin-top: 64px;
+  padding: 32px;
+  border-radius: var(--radius-card);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 100px;
+}
+
+.roadmapCtaTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.roadmapCtaDesc {
+  font-size: 14.5px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+
+.roadmapCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 14px rgba(15, 148, 136, 0.3);
+}
+
+.roadmapCtaBtn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 760px) {
+  .mvvSection {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .roadmapSection {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .sectionTitle,
+  .teamSectionTitle,
+  .roadmapTitle {
+    font-size: 26px;
+  }
+
+  .trustTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .narrativeCard {
+    padding: 24px 20px;
+  }
+
+  .narrativeTitle {
+    font-size: 22px;
+  }
+
+  .tileValue {
+    font-size: 28px;
+  }
+
+  .tileValueSmall {
+    font-size: 18px;
+  }
+
+  .trustBanner {
+    padding: 28px 22px;
+  }
+
+  .microBadges {
+    gap: 8px;
+  }
+}

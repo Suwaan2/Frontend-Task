@@ -1,0 +1,11 @@
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  line-height: 0;
+}
+
+.mark svg {
+  display: block;
+}

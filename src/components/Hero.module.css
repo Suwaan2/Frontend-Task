@@ -1,0 +1,78 @@
+.heroSection {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heroContainer.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.heroContainer.centered .heroLede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroContainer.centered .heroActions {
+  justify-content: center;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  max-width: 820px;
+  line-height: 1.18;
+  margin-bottom: 18px;
+}
+
+.heroLede {
+  max-width: 680px;
+  margin-bottom: 28px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.heroChildren {
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .heroTitle {
+    font-size: 34px;
+    line-height: 1.22;
+  }
+
+  .heroLede {
+    font-size: 15.5px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .heroActions a,
+  .heroActions button {
+    width: 100%;
+  }
+}
