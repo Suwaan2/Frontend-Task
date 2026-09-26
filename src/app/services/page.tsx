@@ -262,31 +262,31 @@ export default function ServicesPage() {
     { icon: "broadcast_on_home", name: "Media", desc: "Broadcast networks, dynamic news feeds & audio." },
   ];
 
-  // 5. Dark trust section: 6 checklist items
+  // 5. Dark "Why work with us": 6 checklist items from spec
   const trustItems = [
     {
-      title: "Agile & Transparent Sprints",
-      desc: "Direct visibility into Git commits, linear pipelines, and bi-weekly review sessions. No black boxes.",
+      title: "Dedicated Project Manager",
+      desc: "Direct single point of contact embedded in your operational rhythm, ensuring clear communication and milestone velocity.",
     },
     {
-      title: "Dedicated Venture Architects",
-      desc: "Senior strategic leads embedded directly into your operational rhythm, functioning as fractional executive muscle.",
+      title: "Agile Development Cycle",
+      desc: "Two-week sprints, continuous demo reviews, and full visibility into code repositories and deployment pipelines.",
     },
     {
-      title: "Strict Code & Quality Standards",
-      desc: "Peer-reviewed PRs, automated test harnesses, and type-safe systems that reduce production anomalies by 94%.",
+      title: "Transparent Pricing",
+      desc: "Clear deliverable-based and monthly scope agreements with zero hidden retainers or surprise change-order fees.",
     },
     {
-      title: "Data-Backed Analytics",
-      desc: "Real telemetry, multi-touch attribution, and clear KPI roadmaps replace subjective agency guesswork.",
+      title: "Post-Launch Support",
+      desc: "Proactive security patching, uptime monitoring, and SLA-backed maintenance that ensure operational stability.",
     },
     {
-      title: "Continuous Support",
-      desc: "We don't abandon you after launch. Proactive patch cadences, security auditing, and iterative UX refactors.",
+      title: "Scalable Architecture",
+      desc: "Modular cloud backends, microservices, and database indexing designed to sustain high traffic spikes without degradation.",
     },
     {
-      title: "Deep Regional Insights",
-      desc: "Grounded local knowledge across payment behaviors, cultural nuances, and logistical intricacies across Nepal.",
+      title: "Cross-Platform Expertise",
+      desc: "Seamless performance across iOS, Android, and web with unified design systems and synchronized APIs.",
     },
   ];
 
@@ -510,10 +510,10 @@ export default function ServicesPage() {
           <div className={styles.trustHeader}>
             <div>
               <span className={styles.sectionEyebrowGold}>
-                The Chautari Foundation
+                The Chautari Advantage
               </span>
               <h2 className={styles.trustTitle}>
-                Engineered for reliability, audited for velocity.
+                Why Work With Us
               </h2>
             </div>
             <p className={styles.trustLede}>

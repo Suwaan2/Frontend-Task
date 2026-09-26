@@ -27,10 +27,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setMobileMenuOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -62,22 +63,20 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Action Button & Mobile Toggle */}
+        {/* Mobile Toggle */}
         <div className={styles.headerRight}>
-          <Link href="/contact" className={styles.contactBtnPill}>
-            Contact Us
-          </Link>
-
           <button
             type="button"
             className={styles.hamburgerBtn}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label="Toggle navigation menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
-            <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barTop : ""}`} />
-            <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barMid : ""}`} />
-            <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barBot : ""}`} />
+            <span className={styles.hamburgerIcon}>
+              <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barTop : ""}`} />
+              <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barMid : ""}`} />
+              <span className={`${styles.hamburgerBar} ${mobileMenuOpen ? styles.barBot : ""}`} />
+            </span>
           </button>
         </div>
       </div>
@@ -93,14 +92,12 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`${styles.mobileNavItem} ${isActive ? styles.mobileNavActive : ""}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               );
             })}
-            <Link href="/contact" className={`btn btn-primary ${styles.mobileContactBtn}`}>
-              Contact Us →
-            </Link>
           </nav>
         </div>
       )}

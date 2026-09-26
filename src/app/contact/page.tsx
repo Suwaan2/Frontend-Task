@@ -87,6 +87,7 @@ export default function ContactPage() {
     <div className={styles.contactPage}>
       {/* 1. HERO */}
       <Hero
+        centered
         title={
           <>
             Let&apos;s start a{" "}
@@ -217,35 +218,61 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Service SLA Commitment Card */}
-              <div className={styles.slaCard}>
-                <div className={styles.slaGlow} />
-                <div className={styles.slaTop}>
-                  <div className={styles.slaIconBox}>
-                    <span className="material-symbols-outlined">verified</span>
+              {/* Response Time Breakdown Card (PDF Spec) */}
+              <div className={styles.responseCard}>
+                <div className={styles.responseHeader}>
+                  <div className={styles.responseHeaderLeft}>
+                    <span className="material-symbols-outlined">schedule</span>
+                    <h4 className={styles.responseTitle}>Response Times</h4>
                   </div>
-                  <div>
-                    <h4 className={styles.slaTitle}>Our SLA Pledge</h4>
-                    <p className={styles.slaDesc}>
-                      Guaranteed response within 24 hours on business days.
-                      Every request is reviewed directly by a venture partner.
-                    </p>
-                    <div className={styles.slaBadges}>
-                      <span className={styles.slaBadge}>
-                        <span className="material-symbols-outlined">bolt</span>
-                        Priority intake
-                      </span>
-                      <span className={styles.slaBadge}>
-                        <span className="material-symbols-outlined">lock</span>
-                        Strict NDA compliance
-                      </span>
+                  <span className={styles.responsePill}>SLA Guarantee</span>
+                </div>
+                <div className={styles.responseList}>
+                  <div className={styles.responseItem}>
+                    <div className={styles.responseItemLeft}>
+                      <span className="material-symbols-outlined">mail</span>
+                      <span className={styles.responseLabel}>Email Inquiries</span>
                     </div>
+                    <span className={styles.responseTimeBadge}>24h</span>
+                  </div>
+                  <div className={styles.responseItem}>
+                    <div className={styles.responseItemLeft}>
+                      <span className="material-symbols-outlined">description</span>
+                      <span className={styles.responseLabel}>Detailed Proposals</span>
+                    </div>
+                    <span className={styles.responseTimeBadge}>2–3 days</span>
+                  </div>
+                  <div className={styles.responseItem}>
+                    <div className={styles.responseItemLeft}>
+                      <span className="material-symbols-outlined">bolt</span>
+                      <span className={styles.responseLabel}>Urgent Matters</span>
+                    </div>
+                    <span className={`${styles.responseTimeBadge} ${styles.badgeUrgent}`}>Same day</span>
                   </div>
                 </div>
               </div>
 
-              {/* Quick FAQ Access Card */}
-              <FaqAccordion />
+              {/* Dark "Need quick answers? Visit FAQ page →" Callout (PDF Spec) */}
+              <div className={styles.darkFaqCallout}>
+                <div className={styles.darkFaqContent}>
+                  <div className={styles.darkFaqIcon}>
+                    <span className="material-symbols-outlined">quiz</span>
+                  </div>
+                  <div>
+                    <h4 className={styles.darkFaqTitle}>Need quick answers?</h4>
+                    <p className={styles.darkFaqSub}>Common questions on pricing, SLA, and processes.</p>
+                  </div>
+                </div>
+                <a href="#faq" className={styles.darkFaqLink}>
+                  <span>Visit FAQ section</span>
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </a>
+              </div>
+
+              {/* Quick FAQ Access Accordion */}
+              <div id="faq">
+                <FaqAccordion />
+              </div>
             </div>
           </div>
         </div>

@@ -817,12 +817,20 @@ export default function HomePage() {
               <p className={styles.ctaSubtitle}>
                 Whether you need agency execution for a flagship brand, full-stack software development, or desire a joint venture partnership in health-tech—let us gather at the Chautari.
               </p>
-              <Link href="/contact" className={styles.ctaButton}>
-                <span>Schedule a Consultation</span>
-                <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
-                  arrow_forward
-                </span>
-              </Link>
+              <div className={styles.ctaButtonGroup}>
+                <Link href="/contact" className={styles.ctaButton}>
+                  <span>Start a Project</span>
+                  <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
+                    arrow_forward
+                  </span>
+                </Link>
+                <Link href="/services" className={styles.ctaButtonSecondary}>
+                  <span>View Services</span>
+                  <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>
+                    arrow_forward
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

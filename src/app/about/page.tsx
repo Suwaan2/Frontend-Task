@@ -97,14 +97,15 @@ export default function AboutPage() {
     },
   ];
 
-  // 5. Trust banner badges
+  // 5. Dark "Committed to quality & trust": 4 cards from spec
   const trustBadges = [
-    { icon: "verified_user", label: "HIPAA-aligned Practices", accent: "iconTeal" },
-    { icon: "speed", label: "Sub-100ms Microservices", accent: "iconGold" },
-    { icon: "code", label: "100% Type-Safe Stacks", accent: "iconGreen" },
+    { icon: "verified", label: "ISO 9001 Ready", accent: "iconTeal" },
+    { icon: "shield", label: "Data Protection", accent: "iconGold" },
+    { icon: "public", label: "Global Delivery", accent: "iconGreen" },
+    { icon: "hub", label: "Pan-Nepal Network", accent: "iconTeal" },
   ];
 
-  // 6. Team roles: 7 cards (first featured)
+  // 6. Team roles: 7 cards from spec (first featured)
   const teamRoles: TeamRole[] = [
     {
       role: "Founder & CEO",
@@ -112,83 +113,83 @@ export default function AboutPage() {
       icon: "hub",
       accent: "accentTeal",
       dept: "Venture Architecture & Ecosystem Strategy",
-      bio: "Spearheads vision, strategic investor alignment, and incubator direction across all three sovereign portfolio initiatives with a firm commitment to Himalayan innovation.",
+      bio: "Spearheads company vision, strategic investor alignment, and incubator direction across all three sovereign portfolio initiatives with a firm commitment to Himalayan innovation.",
       featured: true,
     },
     {
-      role: "Chief Technology Officer",
-      badge: "Architecture",
-      icon: "terminal",
-      accent: "accentTeal",
-      bio: "Leads core engineering roadmaps, distributed cloud topology, security postures, and enterprise integrations.",
-      focus: "Focus: Cloud Native & Resiliency",
-    },
-    {
-      role: "Head of Product & Design",
-      badge: "Design System",
-      icon: "brush",
+      role: "Co-Founder & COO",
+      badge: "Operations",
+      icon: "dashboard_customize",
       accent: "accentGold",
-      bio: "Shapes human-centered UX design language, design tokens, micro-interactions, and frictionless client onboardings.",
-      focus: "Focus: UI Accessibility & Ergonomics",
+      bio: "Orchestrates operational workflows, resource allocations, sprint velocities, and inter-departmental synergy across all ventures.",
+      focus: "Focus: Operational Excellence & Scalability",
     },
     {
-      role: "Lead Creative Strategist",
-      badge: "Storytelling",
-      icon: "campaign",
+      role: "Front-End Developer",
+      badge: "UI Engineering",
+      icon: "code_blocks",
+      accent: "accentTeal",
+      bio: "Crafts performant, accessible, and tactile user interfaces with Next.js, modern CSS, and fluid interactive animations.",
+      focus: "Focus: Modern Web & Responsive Systems",
+    },
+    {
+      role: "Back-End Developer",
+      badge: "Systems Architecture",
+      icon: "terminal",
       accent: "accentGreen",
-      bio: "Drives narrative development for One Content Studio and crafts targeted organic growth trajectories for partners.",
-      focus: "Focus: Multi-Channel Impact",
+      bio: "Engineers distributed microservices, reliable REST & GraphQL APIs, secure databases, and zero-downtime deployments.",
+      focus: "Focus: Serverless Cloud & API Design",
     },
     {
-      role: "Senior Full-Stack Engineer",
-      badge: "Execution",
-      icon: "integration_instructions",
-      accent: "accentTeal",
-      bio: "Maintains responsive client web experiences, database schemas, and seamless continuous delivery pipelines.",
-      focus: "Focus: TypeScript & NextJS Performance",
+      role: "Marketing Lead",
+      badge: "Growth & Narrative",
+      icon: "campaign",
+      accent: "accentGold",
+      bio: "Drives multi-channel acquisition funnels, organic SEO pipelines, and cultural brand storytelling across regional markets.",
+      focus: "Focus: Performance Marketing & ROAS",
     },
     {
-      role: "Health-Tech Clinical Lead",
-      badge: "Physio@Home",
-      icon: "medical_services",
+      role: "Sales Executive",
+      badge: "Commercial Client Relations",
+      icon: "storefront",
       accent: "accentTeal",
-      bio: "Directs remote clinical protocols, home-rehabilitation efficacy, and therapist certification workflows.",
-      focus: "Focus: Care Compliance & Patient Safety",
+      bio: "Connects visionary enterprises with our bespoke studio service tiers, ensuring value alignment from initial pitch to delivery.",
+      focus: "Focus: Client Acquisition & Onboarding",
     },
     {
       role: "Business Development Officer",
-      badge: "Expansion",
+      badge: "Strategic Alliances",
       icon: "handshake",
       accent: "accentGold",
-      bio: "Forges commercial alliances, client pipelines, and cross-border collaborative models with diaspora enterprises.",
-      focus: "Focus: Market Penetration & Partnerships",
+      bio: "Forges long-term institutional partnerships, joint venture models, and cross-border commercial expansions.",
+      focus: "Focus: Ecosystem Partnerships & Growth",
     },
   ];
 
-  // 7. Roadmap milestones: 4 items
+  // 7. Dark roadmap: 4 items from spec
   const milestones: Milestone[] = [
     {
-      year: "2024",
+      year: "2025",
       title: "The Idea",
       desc: "Conceiving a unified digital studio and venture firm in Kathmandu. Establishing initial proofs-of-concept and cultural tenets rooted in collective community gathering.",
       align: "left",
     },
     {
-      year: "Early 2025",
+      year: "2025",
       title: "First Products",
       desc: "Launch of Eco Creative and One Content Studio. Operationalizing high-velocity brand design services alongside dedicated engineering pods for startup clients.",
       align: "right",
     },
     {
-      year: "Mid 2025",
+      year: "2026",
       title: "Health-Tech Entry",
       desc: "Closed-beta launch of Physio@Home platform. Direct deployment to 100+ home-based rehabilitation cases across the Kathmandu valley with automated clinical scheduling.",
       align: "left",
     },
     {
-      year: "Late 2025 & Beyond",
-      title: "Company Registration & Regional Scale",
-      desc: "Institutional venture registration, cross-border client scaling in APAC & Europe, and releasing specialized SaaS tools tailored to emergent South Asian creator ecosystems.",
+      year: "2026",
+      title: "Company Registration",
+      desc: "Official institutional company registration, cross-border client scaling in APAC & Europe, and releasing specialized SaaS tools tailored to emergent South Asian creator ecosystems.",
       align: "right",
     },
   ];
@@ -347,11 +348,10 @@ export default function AboutPage() {
             <div className={styles.trustGlow} />
             <div className={styles.trustContent}>
               <span className={styles.trustEyebrow}>
-                Venture Standards &amp; Quality
+                Institutional Standards
               </span>
               <h2 className={styles.trustTitle}>
-                Engineered with institutional rigor, executed with studio
-                intimacy.
+                Committed to quality &amp; trust
               </h2>
               <p className={styles.trustDesc}>
                 Every venture launched under the Digital Chautari umbrella
