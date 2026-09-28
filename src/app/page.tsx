@@ -20,6 +20,9 @@ export default function HomePage() {
         <div className={styles.heroGlowLeft} />
 
         <div className={styles.heroContent}>
+          {/* Eyebrow */}
+          <div className="eyebrow-pill">🚀 Welcome to Digital Chautari</div>
+
           {/* Main Headline */}
           <h1 className={styles.heroHeadline}>
             We build{" "}

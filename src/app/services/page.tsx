@@ -46,15 +46,7 @@ interface PricingTier {
 }
 
 export default function ServicesPage() {
-  // 1. Hero metrics ticker
-  const metrics = [
-    { value: "98.4%", label: "SLA Adherence", accent: "metricTeal" },
-    { value: "4.8x", label: "Avg. Client ROI", accent: "metricGold" },
-    { value: "42+", label: "Ventures Launched", accent: "metricGreen" },
-    { value: "<14d", label: "Sprint Cycle Velocity", accent: "metricInk" },
-  ];
-
-  // 2. Service Pillars: 3 rows with 2x2 sub-services
+  // 1. Service Pillars: 3 rows with 2x2 sub-services
   const servicePillars: ServicePillar[] = [
     {
       id: "marketing",
@@ -188,7 +180,7 @@ export default function ServicesPage() {
     },
   ];
 
-  // 3. Pricing: 3 tiers
+  // 2. Pricing: 3 tiers
   const pricingTiers: PricingTier[] = [
     {
       name: "Starter",
@@ -252,7 +244,7 @@ export default function ServicesPage() {
     },
   ];
 
-  // 4. Industries: 6 cards
+  // 3. Industries: 6 cards
   const industries = [
     { icon: "clinical_notes", name: "Healthcare", desc: "EHR, clinics, diagnostic labs & telemedicine." },
     { icon: "shopping_bag", name: "E-Commerce", desc: "D2C, marketplace engines & local checkout." },
@@ -262,7 +254,7 @@ export default function ServicesPage() {
     { icon: "broadcast_on_home", name: "Media", desc: "Broadcast networks, dynamic news feeds & audio." },
   ];
 
-  // 5. Dark "Why work with us": 6 checklist items from spec
+  // 4. Dark "Why work with us": 6 checklist items from spec
   const trustItems = [
     {
       title: "Dedicated Project Manager",
@@ -302,18 +294,7 @@ export default function ServicesPage() {
           </>
         }
         lede="Comprehensive digital strategy, creative content production, and enterprise software engineering tailored for bold enterprises navigating rapid market shifts."
-      >
-        <div className={styles.metricsGrid}>
-          {metrics.map((metric, idx) => (
-            <div key={idx} className={styles.metricCard}>
-              <span className={`${styles.metricValue} ${styles[metric.accent]}`}>
-                {metric.value}
-              </span>
-              <span className={styles.metricLabel}>{metric.label}</span>
-            </div>
-          ))}
-        </div>
-      </Hero>
+      />
 
       {/* 2. SERVICE PILLARS (3 rows) */}
       <section className={styles.pillarsSection} data-reveal>

@@ -984,29 +984,29 @@
 }
 
 .spotlightStatIcon.primary {
-  background: rgba(15, 148, 136, 0.15);
+  background: rgba(15, 148, 136, 0.22);
 }
 
 .spotlightStatIcon.primary .material-symbols-outlined {
-  color: var(--color-primary);
+  color: #89f5e7;
   font-size: 24px;
 }
 
 .spotlightStatIcon.gold {
-  background: rgba(224, 169, 48, 0.15);
+  background: rgba(224, 169, 48, 0.22);
 }
 
 .spotlightStatIcon.gold .material-symbols-outlined {
-  color: var(--color-gold);
+  color: #ffdea5;
   font-size: 24px;
 }
 
 .spotlightStatIcon.leaf {
-  background: rgba(127, 174, 58, 0.15);
+  background: rgba(127, 174, 58, 0.22);
 }
 
 .spotlightStatIcon.leaf .material-symbols-outlined {
-  color: var(--color-leaf-green);
+  color: #bff376;
   font-size: 24px;
 }
 

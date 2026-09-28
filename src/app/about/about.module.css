@@ -66,6 +66,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 28px;
+  min-width: 0;
 }
 
 .narrativeEyebrow {
@@ -155,7 +156,7 @@
 /* 2x2 Stat Tiles */
 .tilesGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -168,12 +169,14 @@
   box-shadow: var(--shadow-card-rest);
   transition: background-color var(--transition-base);
   min-height: 170px;
+  min-width: 0;
 }
 
 .tileTopRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -1094,12 +1097,57 @@
     font-size: 22px;
   }
 
+  .narrativeQuote {
+    align-items: flex-start;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .quoteText {
+    font-size: 13px;
+  }
+
+  .tilesGrid {
+    gap: 12px;
+  }
+
+  .statTile {
+    padding: 16px 14px;
+    min-height: 154px;
+  }
+
+  .tileTopRow {
+    gap: 6px;
+  }
+
+  .tileIconBox {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tileIconBox .material-symbols-outlined {
+    font-size: 18px;
+  }
+
+  .tileCategory {
+    font-size: 10.5px;
+    letter-spacing: 0.03em;
+  }
+
+  .tileBottom {
+    margin-top: 18px;
+  }
+
   .tileValue {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .tileValueSmall {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .tileLabel {
+    font-size: 12.5px;
   }
 
   .trustBanner {

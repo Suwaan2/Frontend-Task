@@ -3,6 +3,7 @@ import { Sora, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 const sora = Sora({
@@ -55,6 +56,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <ScrollToTop />
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />

@@ -2,48 +2,7 @@
   width: 100%;
 }
 
-/* 1. Hero Metrics */
-.metricsGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.metricCard {
-  background: #ffffff;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-card);
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  box-shadow: var(--shadow-card-rest);
-}
-
-.metricValue {
-  font-family: var(--font-heading);
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.metricLabel {
-  font-size: 13px;
-  color: var(--color-muted);
-  text-align: center;
-}
-
-.metricTeal { color: var(--color-primary); }
-.metricGold { color: var(--color-gold); }
-.metricGreen { color: var(--color-leaf-green); }
-.metricInk { color: var(--color-ink); }
-
-/* 2. Service Pillars */
+/* 1. Service Pillars */
 .pillarsSection {
   background: #f4f6f5;
   padding-top: var(--section-pad-standard);
@@ -307,7 +266,7 @@
   margin-bottom: 12px;
 }
 
-/* 3. Pricing */
+/* 2. Pricing */
 .pricingSection {
   background: #ffffff;
   padding-top: var(--section-pad-standard);
@@ -534,7 +493,7 @@
   box-shadow: 0 8px 16px -4px rgba(224, 169, 48, 0.4);
 }
 
-/* 4. Industries */
+/* 3. Industries */
 .industriesSection {
   background: #f4f6f5;
   padding-top: var(--section-pad-standard);
@@ -630,7 +589,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* 5. Dark Trust Section */
+/* 4. Dark Trust Section */
 .trustSection {
   padding-top: 72px;
   padding-bottom: 72px;
@@ -712,7 +671,7 @@
   line-height: 1.6;
 }
 
-/* 6. Closing CTA */
+/* 5. Closing CTA */
 .ctaSection {
   background: var(--color-paper);
 }
@@ -818,10 +777,6 @@
     grid-template-columns: 1fr;
   }
 
-  .metricsGrid {
-    max-width: 560px;
-  }
-
   .pricingGrid {
     grid-template-columns: 1fr;
     max-width: 480px;
@@ -894,11 +849,6 @@
 }
 
 @media (max-width: 600px) {
-  .metricsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-  }
-
   .subServicesGrid {
     grid-template-columns: 1fr;
   }

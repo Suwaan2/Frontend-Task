@@ -21,7 +21,7 @@ export default function ProductsPage() {
           <div className={styles.heroCenter}>
             <h1 className={styles.heroTitle}>
               Three ventures,{" "}
-              <span className={styles.heroTitleGradient}>one unified vision</span>
+              <span className={styles.heroTitleGradient}>one  vision</span>
             </h1>
 
             <p className={styles.heroLede}>
